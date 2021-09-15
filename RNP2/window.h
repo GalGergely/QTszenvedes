@@ -16,6 +16,11 @@
 #include <QAtomicInteger>
 #include <QRandomGenerator>
 #include <QIODevice>
+#include <QPlainTextEdit>
+#include <QTextStream>
+#include <QRandomGenerator>
+#include <random>
+#include "QDateTime"
 
 class Window : public QWidget
 {
@@ -30,9 +35,18 @@ private:
     QLabel* welcome;
     QLineEdit* lineedit;
     QPushButton* button;
+    QPushButton* boros;
+    QPushButton* save;
+    QPushButton* get;
     QGridLayout* gridLayout;
+    QHBoxLayout* boxLayout;
+    QHBoxLayout* boxLayout2;
+    QPlainTextEdit* plainText;
 private slots:
-    void handleButtonClicked();
+    void handleButtonClicked1();
+    void handleButtonClicked2();
+    void saveButtonClicked();
+    void getButtonClicked();
 
 };
 #endif // WINDOW_H
